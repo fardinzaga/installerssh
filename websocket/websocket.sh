@@ -16,7 +16,7 @@ cd
 cd /etc/systemd/system/
 wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-openssh.service
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/${GitUser}/test1/main/${namafolder}/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear.service
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/${GitUser}/test1/main/${namafolder}/ws-stunnel.service
 ##System Websocket-OpenVPN Python
