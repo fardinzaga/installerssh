@@ -21,7 +21,7 @@ commonname=0.0.0.0
 email=Fauzanvpn.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/${GitUser}/test1/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/fardinzaga/installerssh/master/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
