@@ -277,7 +277,7 @@ wget -O restart "https://raw.githubusercontent.com/fardinzaga/installerssh/maste
 wget -O info "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/info.sh"
 wget -O ram "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/renew.sh"
-wget -O autokick "https://raw.githubusercontent.com/${GitUser}/test1/main/autokick.sh"
+wget -O autokick "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/autokick.sh"
 wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
