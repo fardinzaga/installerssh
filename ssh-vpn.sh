@@ -274,7 +274,6 @@ wget -o webmin "https://raw.githubusercontent.com/${GitUser}/test1/main/webmin.s
 wget -O delete "https://raw.githubusercontent.com/${GitUser}/test1/main/hapus/delete.sh"
 wget -O cek "https://raw.githubusercontent.com/${GitUser}/test1/main/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/${GitUser}/test1/main/restart.sh"
-wget -O speedtest "https://github.com/${GitUser}/test1/raw/main/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/${GitUser}/test1/main/info.sh"
 wget -O ram "https://raw.githubusercontent.com/${GitUser}/test1/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/${GitUser}/test1/main/renew.sh"
@@ -295,7 +294,6 @@ chmod +x delete
 chmod +x webmin
 chmod +x cek
 chmod +x restart
-chmod +x speedtest
 chmod +x info
 chmod +x about
 chmod +x autokill
