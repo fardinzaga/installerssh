@@ -24,7 +24,7 @@ wget -O autobackup "https://raw.githubusercontent.com/fardinzaga/installerssh/ma
 wget -O backup "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/backup.sh"
 wget -O bckp "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/bckp.sh"
 wget -O restore "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/strt"
+wget -O strt "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/strt.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
