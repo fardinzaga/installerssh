@@ -241,7 +241,7 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/bbr/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 wget https://raw.githubusercontent.com/${GitUser}/test1/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # blockir torrent
