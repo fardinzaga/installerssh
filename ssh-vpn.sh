@@ -279,7 +279,7 @@ wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
 
-echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 8 * * * root clear-log && reboot" >> /etc/crontab
 
 chmod +x addhost
 chmod +x menu
