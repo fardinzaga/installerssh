@@ -199,7 +199,7 @@ service sslh restart
 /etc/init.d/sslh restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/openvpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
