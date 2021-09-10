@@ -118,6 +118,7 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 443' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 51443' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 58080' /etc/ssh/sshd_config
@@ -170,9 +171,6 @@ connect = 127.0.0.1:44
 [ssldropbear]
 accept = 777
 connect = 127.0.0.1:77
-[slws]
-accept = 443
-connect = 127.0.0.1:2096
 [openvpn]
 accept = 992
 connect = 127.0.0.1:2092
