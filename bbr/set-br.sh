@@ -22,11 +22,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/${GitUser}/test1/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/${GitUser}/test1/main/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/${GitUser}/test1/main/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/${GitUser}/test1/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/${GitUser}/test1/main/strt.sh"
+wget -O autobackup "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/strt"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
