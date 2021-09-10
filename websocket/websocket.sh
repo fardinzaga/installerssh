@@ -5,10 +5,6 @@ sleep 1
 echo Cek Hak Akses...
 sleep 0.5
 cd
-#Buat name user github dan nama folder
-GitUser="fisabiliyusri"
-namafolder="websocket-python"
-#wget https://github.com/${GitUser}/main/${namafolder}/
 
 #Install system auto run
 #System OpenSSH Websocket-SSH Python
