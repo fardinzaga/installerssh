@@ -22,8 +22,11 @@ echo "Ketikkan Perintah addhost setelah proses instalasi Script Selesai"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
+
+#install ssh ovpn
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/${GitUser}/test1/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+#install ssh websocket
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
 history -c
