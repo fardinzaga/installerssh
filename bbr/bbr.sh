@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script Install TCP BBR By SL
+#Script Install TCP BBR By Fauzanvpn
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
 		echo "" >> "$1"
