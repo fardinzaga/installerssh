@@ -95,8 +95,8 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/fardinzaga/installerssh/master/nginx/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup Mod By SL</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/test1/main/vps.conf"
+echo "<pre>Setup Mod By Fauzanvpn</pre>" > /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/fardinzaga/installerssh/master/nginx/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
