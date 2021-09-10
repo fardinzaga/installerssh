@@ -139,7 +139,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/${GitUser}/test1/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/fardinzaga/installerssh/master/squid/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting dan install vnstat debian 9 64bit
