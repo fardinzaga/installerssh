@@ -21,4 +21,4 @@ echo > /var/log/syslog
 echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
-echo -e "Mod by SL"
+echo -e "Mod by Fauzanvpn"
