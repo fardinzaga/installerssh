@@ -171,7 +171,7 @@ connect = 127.0.0.1:44
 accept = 777
 connect = 127.0.0.1:77
 [openvpn]
-accept = 992
+accept = 442
 connect = 127.0.0.1:2092
 END
 
@@ -196,7 +196,7 @@ service sslh restart
 /etc/init.d/sslh restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/openvpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
