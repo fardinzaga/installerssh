@@ -172,7 +172,7 @@ accept = 777
 connect = 127.0.0.1:77
 [openvpn]
 accept = 442
-connect = 127.0.0.1:2092
+connect = 127.0.0.1:1194
 END
 
 echo "=================  membuat Sertifikat OpenSSL ======================"
