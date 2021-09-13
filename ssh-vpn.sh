@@ -171,8 +171,8 @@ connect = 127.0.0.1:44
 accept = 777
 connect = 127.0.0.1:77
 [ws-stunnel]
-accept = 2053
-connect = 127.0.0.1:143
+accept = 443
+connect = 127.0.0.1:700
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
