@@ -32,9 +32,8 @@ chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 #chmod +x /usr/local/bin/ws-ovpn
 
-cd
+#restart service
 #
-cd
 systemctl daemon-reload
 #Enable & Start & Restart ws-openssh service
 systemctl enable ws-openssh.service
