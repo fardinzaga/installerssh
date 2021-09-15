@@ -16,7 +16,7 @@ wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.co
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
 ##System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
+#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
 
 #Install Script Websocket-SSH Python
 cd
@@ -25,8 +25,12 @@ wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/i
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear && chmod +x /home/admin/bin/ws-dropbear
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
-#
+
+#izin permision
 chmod +x /usr/local/bin/ws-openssh
+chmod +x /usr/local/bin/ws-dropbear
+chmod +x /usr/local/bin/ws-stunnel
+#chmod +x /usr/local/bin/ws-ovpn
 
 cd
 #
@@ -48,6 +52,6 @@ systemctl start ws-stunnel.service
 systemctl restart ws-stunnel.service
 
 #Enable & Start ws-ovpn service
-systemctl enable ws-ovpn.service
-systemctl start ws-ovpn.service
-systemctl restart ws-ovpn.service
+#systemctl enable ws-ovpn.service
+#systemctl start ws-ovpn.service
+#systemctl restart ws-ovpn.service
