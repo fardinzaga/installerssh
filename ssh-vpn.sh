@@ -110,31 +110,22 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 
-apt-get -y update
 # setting port ssh
 cd
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
-# /etc/ssh/sshd_config
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 51443' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 58080' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 2000' /etc/ssh/sshd_config
 sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 5000' /etc/ssh/sshd_config
+sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 
-echo "===  install Dropbear ==="
 # install dropbear
-apt-get -y install dropbear
+apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=44/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 143 -p 50000 -p 109 -p 77 "/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 77 -p 2000 -p 143 -p 109 "/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-/etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
 # install squid
