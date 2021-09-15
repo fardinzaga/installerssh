@@ -17,6 +17,8 @@ wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.co
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn.service
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-maulana.service
 ##System Websocket-OpenVPN Python
 #wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
 
