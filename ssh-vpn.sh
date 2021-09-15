@@ -204,7 +204,7 @@ service sslh restart
 # ==============================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/Fauzanvpn.py
+wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn.py
 chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service
