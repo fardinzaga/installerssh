@@ -27,6 +27,7 @@ wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/i
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear && chmod +x /home/admin/bin/ws-dropbear
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn && chmod +x /home/admin/ws-fauzanvpn
+Whey -0 /usr/local/bin/ws-maulana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-maulana && chmod +x /home/admin/ws-maulana
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
 
 #izin permision
@@ -34,6 +35,7 @@ chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-fauzanvpn
+chmod +x /usr/local/bin/ws-maulana
 #chmod +x /usr/local/bin/ws-ovpn
 
 #restart service
@@ -58,6 +60,11 @@ systemctl restart ws-stunnel.service
 systemctl enable ws-fauzanvpn.service
 systemctl start ws-fauzanvpn.service
 systemctl restart ws-fauzanvpn.service
+
+#Enable & Start & Restart ws-maulana service
+systemctl enable ws-maulana.service
+systemctl start ws-maulana.service
+systemctl restart ws-maulana.service
 
 #Enable & Start ws-ovpn service
 #systemctl enable ws-ovpn.service
