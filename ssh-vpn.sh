@@ -199,6 +199,33 @@ wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/installe
 service sslh restart
 /etc/init.d/sslh restart
 
+# Installl SSH Websocket 
+
+wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/zahdreo.py
+chmod +x /usr/local/bin/edu-proxy
+
+# Installing Service WebSocket
+cat > /etc/systemd/system/edu-proxy.service << END
+[Unit]
+Description=Autoscript by Fauzanvpn
+Documentation=https://hidessh.com/blog
+After=network.target nss-lookup.target
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2056
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
+systemctl enable edu-proxy
+systemctl restart edu-proxy
+
 #!/bin/bash
 # Proxy For Edukasi, Imclass & gamemax
 # ==============================
@@ -233,33 +260,6 @@ systemctl restart edu-proxy
 
 clear
 echo -e Fauzanvpn
-
-# Installl SSH Websocket 
-
-wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/proxy-cf.py
-chmod +x /usr/local/bin/edu-proxy
-
-# Installing Service WebSocket
-cat > /etc/systemd/system/edu-proxy.service << END
-[Unit]
-Description=Autoscript by Fauzanvpn
-Documentation=https://hidessh.com/blog
-After=network.target nss-lookup.target
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2083
-Restart=on-failure
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload
-systemctl enable edu-proxy
-systemctl restart edu-proxy
 
 #OpenVPN
 #wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
