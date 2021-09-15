@@ -232,11 +232,11 @@ systemctl enable edu-proxy
 systemctl restart edu-proxy
 
 clear
-echo -e Geo Gabut
+echo -e Fauzanvpn
 
 
 #OpenVPN
-wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+#wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
