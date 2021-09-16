@@ -38,7 +38,7 @@ echo "--------------------------------------------------------------------------
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                  : 22, 500"  | tee -a log-install.txt
-echo "   - SSH-WS CDN OpenSSH       : 2086, 2056"  | tee -a log-install.txt
+echo "   - SSH-WS CDN OpenSSH       : 2086, 2097"  | tee -a log-install.txt
 echo "   - SSH-WS CDN Dropbear      : 2082, 2095"  | tee -a log-install.txt
 echo "   - SSH-WS CDN SSL/TLS       : 443"  | tee -a log-install.txt
 echo "   - Websocket                : 80"  | tee -a log-install.txt
