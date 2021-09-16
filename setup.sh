@@ -15,8 +15,10 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/premium-script;
+mkdir /etc/v2ray
+mkdir /var/lib/crot-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
+echo "$host" >> /etc/v2ray/domain
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/cf/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
