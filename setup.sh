@@ -1,25 +1,27 @@
-#!/bin/bash
 if [ "${EUID}" -ne 0 ]; then
-  echo "You need to run this script as root"
-  exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-  echo "OpenVZ is not supported"
-  exit 1
+echo "You need to run this script as root"
+exit 1
 fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-if [ -f "/etc/v2ray/domain" ]; then
-echo "Script Already Installed"
-exit 0
+echo "Checking VPS"
+IZIN=$( curl http://ipinfo.io/ip | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permintaan Diterima...${NC}"
+else
+echo -e "${red}Permintaan Ditolak!${NC}";
+echo "Hanya untuk pengguna terdaftar"
 fi
 mkdir /etc/v2ray
 mkdir /var/lib/crot-script;
-echo "IP=" >> /var/lib/premium-script/ipvps.conf
+clear
+echo "Masukkan Domain Anda, Jika Anda Tidak Memiliki Domain Klik Enter"
+echo "Ketikkan Perintah addhost setelah proses instalasi Script Selesai"
+read -p "Hostname / Domain: " host
+echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
-wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/cf/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #install ssh websocket
