@@ -114,7 +114,6 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 cd
 sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 700' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 5000' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -190,6 +189,33 @@ apt-get -y install sslh
 wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sslh/sslh.conf"
 service sslh restart
 /etc/init.d/sslh restart
+
+# Installl SSH Websocket 
+
+wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/proxy-cf.py
+chmod +x /usr/local/bin/edu-proxy
+
+# Installing Service WebSocket
+cat > /etc/systemd/system/edu-proxy.service << END
+[Unit]
+Description=Autoscript by Fauzanvpn
+Documentation=https://hidessh.com/blog
+After=network.target nss-lookup.target
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2056
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
+systemctl enable edu-proxy
+systemctl restart edu-proxy
 
 #!/bin/bash
 # Proxy For Edukasi, Imclass & gamemax
