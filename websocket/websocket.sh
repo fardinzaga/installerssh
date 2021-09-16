@@ -29,7 +29,7 @@ wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/i
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear && chmod +x /home/admin/bin/ws-dropbear
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn && chmod +x /home/admin/ws-fauzanvpn
-Wget -0 /usr/local/bin/ws-maulana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-maulana && chmod +x /home/admin/ws-maulana
+wget -0 /usr/local/bin/ws-maulana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-maulana && chmod +x /home/admin/ws-maulana
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
 
 #izin permision
