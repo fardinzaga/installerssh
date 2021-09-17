@@ -18,7 +18,7 @@ wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn.service
 ##System Websocket-OpenVPN Python
-#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
+wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
 
 #Install Script Websocket-SSH Python
 cd
@@ -34,7 +34,7 @@ chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-fauzanvpn
-#chmod +x /usr/local/bin/ws-ovpn
+chmod +x /usr/local/bin/ws-ovpn
 
 #restart service
 #
@@ -60,6 +60,6 @@ systemctl start ws-fauzanvpn.service
 systemctl restart ws-fauzanvpn.service
 
 #Enable & Start ws-ovpn service
-#systemctl enable ws-ovpn.service
-#systemctl start ws-ovpn.service
-#systemctl restart ws-ovpn.service
+systemctl enable ws-ovpn.service
+systemctl start ws-ovpn.service
+systemctl restart ws-ovpn.service
