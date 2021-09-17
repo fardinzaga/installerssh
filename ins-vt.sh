@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/fardinzaga/scriptssh/master/v2ray/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/cert-sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
