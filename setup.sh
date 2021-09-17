@@ -24,8 +24,11 @@ wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/cf/cf.sh &
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #install ssh websocket
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+#install v2ray
+wget https://raw.githubusercontent.com/fardinzaga/scriptssh/master/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
+rm -f /root/ins-vt.sh
 history -c
 echo "1.1" > /home/ver
 clear
@@ -48,6 +51,10 @@ echo "   - Dropbear                 : 143, 109"  | tee -a log-install.txt
 echo "   - Squid Proxy              : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn                   : 7100, 7200, 7300"  | tee -a log-install.txt
 echo "   - Nginx                    : 81"  | tee -a log-install.txt
+echo "   - V2RAY Vmess TLS          : 8443"  | tee -a log-install.txt
+echo "   - V2RAY Vmess None TLS     : 80"  | tee -a log-install.txt
+echo "   - V2RAY Vless TLS          : 2083"  | tee -a log-install.txt
+echo "   - V2RAY Vless None TLS     : 8880"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
