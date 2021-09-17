@@ -25,7 +25,7 @@ wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh
 #install ssh websocket
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 #install v2ray
-wget https://raw.githubusercontent.com/fardinzaga/scriptssh/master/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
 rm -f /root/ins-vt.sh
