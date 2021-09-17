@@ -156,15 +156,15 @@ socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
+[ws-stunnel]
+accept = 443
+connect = 127.0.0.1:800
 [ssldropbear]
 accept = 444
 connect = 127.0.0.1:44
 [ssldropbear]
 accept = 777
 connect = 127.0.0.1:77
-[ws-stunnel]
-accept = 443
-connect = 127.0.0.1:800
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
