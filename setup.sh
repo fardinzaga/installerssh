@@ -16,9 +16,7 @@ echo "Script Already Installed"
 exit 0
 fi
 mkdir /etc/v2ray
-mkdir /var/lib/crot-script;
 mkdir /var/lib/premium-script;
-echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/cf/cf.sh && chmod +x cf.sh && ./cf.sh
