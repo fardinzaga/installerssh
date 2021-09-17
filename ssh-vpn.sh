@@ -166,7 +166,7 @@ connect = 127.0.0.1:44
 accept = 777
 connect = 127.0.0.1:77
 [openvpn]
-accept = 442
+accept = 992
 connect = 127.0.0.1:1194
 END
 
@@ -226,7 +226,7 @@ clear
 echo -e Fauzanvpn
 
 #OpenVPN
-#wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
