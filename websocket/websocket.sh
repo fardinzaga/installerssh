@@ -20,9 +20,9 @@ wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/f
 #System Websocket-OpenVPN Python
 wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-hazrian.service
 #System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
+#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
 #System SSL/TLS Websocket-SSH Python
-wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
+#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
 
 #Install Script Websocket-SSH Python
 cd
@@ -73,9 +73,9 @@ systemctl start ws-hazrian.service
 systemctl restart ws-hazrian.service
 
 #Enable & Start ws-ovpn service
-systemctl enable ws-ovpn.service
-systemctl start ws-ovpn.service
-systemctl restart ws-ovpn.service
+#systemctl enable ws-ovpn.service
+#systemctl start ws-ovpn.service
+#systemctl restart ws-ovpn.service
 
 #Enable & Start & Restart ws-stunnel service
 #systemctl enable ws-stunnel.service
