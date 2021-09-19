@@ -44,7 +44,7 @@ echo "   - OpenSSH                  : 22, 500"  | tee -a log-install.txt
 echo "   - SSH-WS CDN OpenSSH       : 2086, 2076"  | tee -a log-install.txt
 echo "   - SSH-WS CDN Dropbear      : 2082, 2095"  | tee -a log-install.txt
 echo "   - SSH-WS CDN SSL/TLS       : 443"  | tee -a log-install.txt
-echo "   - Websocket                : 1182"  | tee -a log-install.txt
+echo "   - Websocket                : 2073"  | tee -a log-install.txt
 echo "   - OpenVPN                  : TCP 1194, UDP 2200, SSL 992, X1197"  | tee -a log-install.txt
 echo "   - Stunnel4 SSL/TLS         : 444"  | tee -a log-install.txt
 echo "   - Dropbear                 : 143, 109"  | tee -a log-install.txt
