@@ -34,7 +34,7 @@ wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn && chmod +x /home/admin/ws-fauzanvpn
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-diana && chmod +x /home/admin/ws-diana
 wget -O /usr/local/bin/ws-hazrian https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-hazrian && chmod +x /home/admin/ws-hazrian
-wget -O /usr/local/bin/ws-hazrian https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-wulan && chmod +x /home/admin/ws-wulan
+wget -O /usr/local/bin/ws-wulan https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-wulan && chmod +x /home/admin/ws-wulan
 #wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
 #wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
 
