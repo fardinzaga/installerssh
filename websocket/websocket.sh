@@ -1,34 +1,10 @@
 #!/bin/bash
-clear
-echo Installing Websocket-SSH Python
-sleep 1
-echo Cek Hak Akses...
-sleep 0.5
-cd
+#installer Websocker tunneling 
+#created Bye HideSSH
 
-#Install system auto run
-#System OpenSSH Websocket-SSH Python
 cd
-cd /etc/systemd/system/
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-openssh.service
-#System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear.service
-#System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn.service
-#System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-diana.service
-#System Websocket-OpenSSH Python
-wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-hazrian.service
-#System Websocket-OpenSSH Python
-wget -O /etc/systemd/system/ws-wulan.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-wulan
-##System Websocket-OpenVPN Python
-#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
-#System SSL/TLS Websocket-SSH Python
-##wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
 
 #Install Script Websocket-SSH Python
-cd
-cd /usr/local/bin/
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-openssh && chmod +x /home/admin/ws-openssh
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear && chmod +x /home/admin/bin/ws-dropbear
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn && chmod +x /home/admin/ws-fauzanvpn
@@ -47,6 +23,30 @@ chmod +x /usr/local/bin/ws-hazrian
 chmod +x /usr/local/bin/ws-wulan
 #chmod +x /usr/local/bin/ws-stunnel
 #chmod +x /usr/local/bin/ws-ovpn
+
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-openssh.service
+
+#System Dropbear Websocket-SSH Python
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear.service
+
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn.service
+
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-diana.service
+
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-hazrian.service
+
+#System OpenSSH Websocket-SSH Python
+wget -O /etc/systemd/system/ws-wulan.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-wulan
+
+#System SSL/TLS Websocket-SSH Python
+#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+
+##System Websocket-OpenVPN Python
+#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 #restart service
 #
@@ -90,4 +90,3 @@ systemctl restart ws-wulan.service
 #systemctl enable ws-stunnel.service
 #systemctl start ws-stunnel.service
 #systemctl restart ws-stunnel.service
-
