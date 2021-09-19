@@ -9,7 +9,6 @@ wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/i
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/dropbear-ws.py 
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn-ws.py 
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py 
-wget -O /usr/local/bin/ws-hazrian https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/hazrian-ws.py 
 wget -O /usr/local/bin/ws-wulan https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/hazrian-ws.py 
 #wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
 #wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
@@ -19,7 +18,6 @@ chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-fauzanvpn
 chmod +x /usr/local/bin/ws-diana
-chmod +x /usr/local/bin/ws-hazrian
 chmod +x /usr/local/bin/ws-wulan
 #chmod +x /usr/local/bin/ws-stunnel
 #chmod +x /usr/local/bin/ws-ovpn
@@ -35,9 +33,6 @@ wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.c
 
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsdiana && chmod +x /etc/systemd/system/ws-diana.service
-
-#System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wshazrian && chmod +x /etc/systemd/system/ws-hazrian.service
 
 #System OpenSSH Websocket-SSH Python
 wget -O /etc/systemd/system/ws-wulan.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-wulan.service
@@ -70,11 +65,6 @@ systemctl restart ws-fauzanvpn.service
 systemctl enable ws-diana.service
 systemctl start ws-diana.service
 systemctl restart ws-diana.service
-
-#Enable & Start & Restart ws-hazrian service
-systemctl enable ws-hazrian.service
-systemctl start ws-hazrian.service
-systemctl restart ws-hazrian.service
 
 #Enable & Start & Restart ws-wulan service
 systemctl enable ws-wulan.service
