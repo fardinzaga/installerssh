@@ -5,7 +5,7 @@
 cd
 
 #Install Script Websocket-SSH Python
-wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-openssh && chmod +x /home/admin/ws-openssh
+wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/openssh-socket.py
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-dropbear && chmod +x /home/admin/bin/ws-dropbear
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-fauzanvpn && chmod +x /home/admin/ws-fauzanvpn
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-diana && chmod +x /home/admin/ws-diana
