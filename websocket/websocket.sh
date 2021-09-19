@@ -25,27 +25,25 @@ chmod +x /usr/local/bin/ws-wulan
 #chmod +x /usr/local/bin/ws-ovpn
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
-
+wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
+wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsfauzanvpn && chmod +x /etc/systemd/system/ws-fauzanvpn.service
+
+#System Dropbear Websocket-SSH Python
+wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsdiana && chmod +x /etc/systemd/system/ws-diana.service
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
+wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wshazrian && chmod +x /etc/systemd/system/ws-hazrian.service
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
-
-#System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
-
+wget -O /etc/systemd/system/ws-wulan.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-wulan.service
 
 #System SSL/TLS Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
 #wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
