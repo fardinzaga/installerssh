@@ -19,10 +19,12 @@ wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.c
 wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-diana.service
 #System Websocket-OpenSSH Python
 wget -O /etc/systemd/system/ws-hazrian.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-hazrian.service
-#System Websocket-OpenVPN Python
+#System Websocket-OpenSSH Python
+wget -O /etc/systemd/system/ws-wulan.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-wulan
+##System Websocket-OpenVPN Python
 #wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-ovpn.service
 #System SSL/TLS Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
+##wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel.service
 
 #Install Script Websocket-SSH Python
 cd
