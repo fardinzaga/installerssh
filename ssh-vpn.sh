@@ -330,4 +330,3 @@ rm -f /root/ssh-vpn.sh
 
 # finihsing
 clear
-netstat -nutlp
