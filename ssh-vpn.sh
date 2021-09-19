@@ -192,7 +192,7 @@ service sslh restart
 
 # Installl SSH Websocket 
 
-#wget -q -O /usr/local/bin/edu-proxy https://adiscript.vercel.app/vpn/proxy-cf.py
+#wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/hazrian-ws.py
 #chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service WebSocket
