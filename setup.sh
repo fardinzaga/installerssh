@@ -46,7 +46,7 @@ echo "   - SSH-WS CDN Dropbear      : 2082"  | tee -a log-install.txt
 echo "   - SSH-WS CDN SSL/TLS       : 443"  | tee -a log-install.txt
 echo "   - Websocket                : 2095"  | tee -a log-install.txt
 echo "   - OpenVPN                  : TCP 1194, UDP 2200, SSL 992, X1197"  | tee -a log-install.txt
-echo "   - Stunnel4 SSL/TLS         : 444"  | tee -a log-install.txt
+echo "   - Stunnel4 SSL/TLS         : 444, 777"  | tee -a log-install.txt
 echo "   - Dropbear                 : 143, 109"  | tee -a log-install.txt
 echo "   - Squid Proxy              : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn                   : 7100, 7200, 7300"  | tee -a log-install.txt
