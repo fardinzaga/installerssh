@@ -46,4 +46,4 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/v2ray/domain
-echo $SUB_DOMAIN > /var/lib/crot-script/ipvps.conf
+echo $SUB_DOMAIN > /var/lib/premium-script/ipvps.conf
