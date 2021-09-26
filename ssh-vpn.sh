@@ -161,10 +161,10 @@ accept = 443
 connect = 127.0.0.1:800
 [ssldropbear]
 accept = 444
-connect = 127.0.0.1:22
+connect = 127.0.0.1:44
 [ssldropbear]
 accept = 777
-connect = 127.0.0.1:77
+connect = 127.0.0.1:22
 [openvpn]
 accept = 992
 connect = 127.0.0.1:1194
