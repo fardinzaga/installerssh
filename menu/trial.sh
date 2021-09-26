@@ -1,6 +1,7 @@
 #!/bin/bash
 
 IP=$(wget -qO- icanhazip.com);
+domain=$(cat /etc/v2ray/domain);
 
 Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
