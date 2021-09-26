@@ -159,12 +159,15 @@ socket = r:TCP_NODELAY=1
 [ws-stunnel]
 accept = 443
 connect = 127.0.0.1:800
+
 [ssldropbear]
 accept = 444
 connect = 127.0.0.1:44
+
 [ssldropbear]
 accept = 777
 connect = 127.0.0.1:22
+
 [openvpn]
 accept = 992
 connect = 127.0.0.1:1194
@@ -183,12 +186,6 @@ cd
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 cd
 /etc/init.d/stunnel4 restart
-cd
-apt-get -y install sslh
-#configurasi sslh
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sslh/sslh.conf"
-service sslh restart
-/etc/init.d/sslh restart
 
 #OpenVPN
 wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
