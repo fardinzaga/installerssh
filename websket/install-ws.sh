@@ -8,9 +8,9 @@ cd
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/openssh-socket.py
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/dropbear-ws.py 
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn-ws.py 
-wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py 
+wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py
+#wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
 #wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
-#wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel
 
 #izin permision
 chmod +x /usr/local/bin/ws-openssh
@@ -61,12 +61,12 @@ systemctl enable ws-diana.service
 systemctl start ws-diana.service
 systemctl restart ws-diana.service
 
-#Enable & Start ws-ovpn service
-#systemctl enable ws-ovpn.service
-#systemctl start ws-ovpn.service
-#systemctl restart ws-ovpn.service
-
 #Enable & Start & Restart ws-stunnel service
 #systemctl enable ws-stunnel.service
 #systemctl start ws-stunnel.service
 #systemctl restart ws-stunnel.service
+
+#Enable & Start ws-ovpn service
+#systemctl enable ws-ovpn.service
+#systemctl start ws-ovpn.service
+#systemctl restart ws-ovpn.service
