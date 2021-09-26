@@ -159,7 +159,7 @@ socket = r:TCP_NODELAY=1
 
 [ws-stunnel]
 accept = 443
-connect = 127.0.0.1:800
+connect = 127.0.0.1:98
 
 [ssldropbear]
 accept = 444
