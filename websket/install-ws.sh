@@ -9,7 +9,7 @@ wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/fardinzaga/i
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/dropbear-ws.py 
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn-ws.py 
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py
-#wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
 #wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws.ovpn && chmod +x /home/admin/ws-ovpn
 
 #izin permision
@@ -17,7 +17,7 @@ chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-fauzanvpn
 chmod +x /usr/local/bin/ws-diana
-#chmod +x /usr/local/bin/ws-stunnel
+chmod +x /usr/local/bin/ws-stunnel
 #chmod +x /usr/local/bin/ws-ovpn
 
 #System OpenSSH Websocket-SSH Python
@@ -33,7 +33,7 @@ wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.c
 wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsdiana && chmod +x /etc/systemd/system/ws-diana.service
 
 #System SSL/TLS Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
 #wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
@@ -62,9 +62,9 @@ systemctl start ws-diana.service
 systemctl restart ws-diana.service
 
 #Enable & Start & Restart ws-stunnel service
-#systemctl enable ws-stunnel.service
-#systemctl start ws-stunnel.service
-#systemctl restart ws-stunnel.service
+systemctl enable ws-stunnel.service
+systemctl start ws-stunnel.service
+systemctl restart ws-stunnel.service
 
 #Enable & Start ws-ovpn service
 #systemctl enable ws-ovpn.service
