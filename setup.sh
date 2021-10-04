@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websket/in
 https://raw.githubusercontent.com/fardinzaga/installerssh/master/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 
 rm -f /root/ssh-vpn.sh
-rm -f /root/websocket.sh
+rm -f /root/install-ws.sh
 rm -f /root/ipsec.sh
 history -c
 echo "1.2" > /home/ver
