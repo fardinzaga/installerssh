@@ -21,7 +21,7 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/cf/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/fardinzaga/deb10/master/Deb10.sh && chmod +x Deb10.sh && screen -S Deb10.sh ./Deb10.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn && screen -S ssh-vpn ./ssh-vpn
 #install ssh ws
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websket/install-ws.sh && chmod +x install-ws.sh && screen -S install-ws.sh ./install-ws.sh
 #install v2ray
