@@ -15,8 +15,8 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /etc/v2ray
 mkdir /var/lib/premium-script;
+mkdir /etc/v2ray;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/cf/cf.sh && chmod +x cf.sh && ./cf.sh
@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ins-vt.sh 
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/install-ws.sh
-rm -f /root/ipsec.sh
+rm -f /root/ins-vt.sh
 history -c
 echo "1.2" > /home/ver
 clear
