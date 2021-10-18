@@ -36,7 +36,7 @@ clear
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "=================================-Script Mod SL Fauzanvpn-===========================" | tee -a log-install.txt
+echo "=================================-Script Mod Fauzanvpn-===========================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
