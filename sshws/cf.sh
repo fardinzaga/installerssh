@@ -8,15 +8,15 @@ rm -f /root/domain
 rm -f /etc/v2ray/domain
 clear
 
-DOMAIN=herlienoma.cf
+DOMAIN=wongkavpn.cf
 #read -rp "Masukkan Domain: " -e DOMAIN
 #echo ""
 #echo "Domain: ${DOMAIN}" 
 #echo ""
 read -rp "Masukkan Subdomain: " -e sub
 SUB_DOMAIN=${sub}.${DOMAIN}
-CF_ID=ocheadiza@apilasansor.com
-CF_KEY=0bd0e472ba7e59855b3e9e6474f203fee3f38
+CF_ID=wandri@cheapnitros.com
+CF_KEY=89b9e074a967fcee562bd84e06392eef317d2
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
