@@ -169,6 +169,10 @@ connect = 127.0.0.1:44
 [ssldropbear]
 accept = 777
 connect = 127.0.0.1:22
+
+[openvpn]
+accept = 992
+connect = 127.0.0.1:1194
 END
 
 echo "=================  membuat Sertifikat OpenSSL ======================"
