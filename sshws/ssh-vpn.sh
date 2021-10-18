@@ -260,7 +260,7 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/slhost.sh"
+wget -O addhost "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/slhost.sh"
 wget -O about "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/about.sh"
 wget -O menu "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/menu"
 wget -O usernew "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/usernew.sh"
