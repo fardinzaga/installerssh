@@ -7,7 +7,7 @@ apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
 
-DOMAIN=fauzanvpn.xyz
+DOMAIN=herlienoma.cf
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.herlienoma.cf
 CF_ID=ocheadiza@apilasansor.com
