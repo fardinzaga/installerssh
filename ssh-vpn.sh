@@ -169,10 +169,6 @@ connect = 127.0.0.1:44
 [ssldropbear]
 accept = 777
 connect = 127.0.0.1:22
-
-[openvpn]
-accept = 992
-connect = 127.0.0.1:1194
 END
 
 echo "=================  membuat Sertifikat OpenSSL ======================"
@@ -196,7 +192,7 @@ service sslh restart
 /etc/init.d/sslh restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/fardinzaga/websocketssh/master/vpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/openvpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
