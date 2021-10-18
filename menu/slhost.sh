@@ -9,7 +9,7 @@ rm -f /etc/v2ray/domain
 
 DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.herlienoma.cf
+SUB_DOMAIN=${sub}.akbar-store.me
 CF_ID=sandigaming01@gmail.com
 CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
