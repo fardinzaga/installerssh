@@ -7,11 +7,11 @@ apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
 
-DOMAIN=herlienoma.cf
+DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.herlienoma.cf
-CF_ID=ocheadiza@apilasansor.com
-CF_KEY=0bd0e472ba7e59855b3e9e6474f203fee3f38
+CF_ID=sandigaming01@gmail.com
+CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
