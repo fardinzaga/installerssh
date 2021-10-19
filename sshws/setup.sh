@@ -19,7 +19,7 @@ mkdir /var/lib/premium-script;
 mkdir /etc/v2ray;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
-https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn.sh ./ssh-vpn.sh
 #install ssh ws
