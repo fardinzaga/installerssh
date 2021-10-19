@@ -7,11 +7,11 @@ apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
 
-DOMAIN=wongkavpn.cf
+DOMAIN=herovpn.ml
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.wongkavpn.cf
-CF_ID=wandri@cheapnitros.com
-CF_KEY=89b9e074a967fcee562bd84e06392eef317d2
+CF_ID=charlago@darazdigital.com
+CF_KEY=66995ee016ce85b440c078428060a4187eca1
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
