@@ -9,7 +9,7 @@ rm -f /etc/v2ray/domain
 
 DOMAIN=herovpn.ml
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.wongkavpn.cf
+SUB_DOMAIN=${sub}.herovpn.ml
 CF_ID=charlago@darazdigital.com
 CF_KEY=66995ee016ce85b440c078428060a4187eca1
 set -euo pipefail
