@@ -6,20 +6,15 @@ MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
-clear
 
 DOMAIN=fauzanvpn.xyz
-#read -rp "Masukkan Domain: " -e DOMAIN
-#echo ""
-#echo "Domain: ${DOMAIN}" 
-#echo ""
-read -rp "Masukkan Subdomain: " -e sub
-SUB_DOMAIN=${sub}.${DOMAIN}
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+SUB_DOMAIN=${sub}.fauzanvpn.xyz
 CF_ID=zafrnavpn@nagarata.com
 CF_KEY=1c9b49618e2b7ca363e1dedbca45241e2b789
 set -euo pipefail
-IP=$(wget -qO- ipinfo.io/ip);
-echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
+IP=$(wget -qO- icanhazip.com);
+echo "Updating DNS for ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
