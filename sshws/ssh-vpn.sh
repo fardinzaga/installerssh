@@ -126,9 +126,19 @@ apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=44/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 77 -p 4000 -p 165 -p 143 -p 109 "/g' /etc/default/dropbear
+
+# update dropbear 2019
+wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2019.78.tar.bz2
+bzip2 -cd dropbear-2019.78.tar.bz2 | tar xvf -
+cd dropbear-2019.78
+./configure
+make && make install
+mv /usr/sbin/dropbear /usr/sbin/dropbear1
+ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
+cd
 
 # install squid
 cd
@@ -279,12 +289,23 @@ wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
 
-# Delete Acount SSH Expired
-echo "================  Auto deleted Account Expired ======================"
-wget -O /usr/local/bin/userdelexpired "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/userdelexpired" && chmod +x /usr/local/bin/userdelexpired
+# Installing Premium Script
+cd
+sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.local
+sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.local
+sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.d/rc.local
+sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.d/rc.local
+echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
 
-echo "0 8 * * * root clear-log && reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
+cat > /root/ban.sh <<END3
+#!/bin/bash
+#/usr/local/bin/user-ban
+END3
+
+cat > /root/limit.sh <<END3
+#!/bin/bash
+#/usr/local/bin/user-limit
+END3
 
 chmod +x addhost
 chmod +x menu
