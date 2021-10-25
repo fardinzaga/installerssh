@@ -288,25 +288,6 @@ wget -O autokick "https://raw.githubusercontent.com/fardinzaga/installerssh/mast
 wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
-
-# Installing Premium Script
-cd
-sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.local
-sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.local
-sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.d/rc.local
-sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.d/rc.local
-echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
-
-cat > /root/ban.sh <<END3
-#!/bin/bash
-#/usr/local/bin/user-ban
-END3
-
-cat > /root/limit.sh <<END3
-#!/bin/bash
-#/usr/local/bin/user-limit
-END3
-
 chmod +x addhost
 chmod +x menu
 chmod +x usernew
@@ -325,6 +306,8 @@ chmod +x ceklim
 chmod +x ram
 chmod +x renew
 chmod +x clear-log
+
+echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
 
 # remove unnecessary files
 apt -y autoclean
