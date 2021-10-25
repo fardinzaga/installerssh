@@ -307,7 +307,12 @@ chmod +x ram
 chmod +x renew
 chmod +x clear-log
 
-echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
+# Delete Acount SSH Expired
+echo "================  Auto deleted Account Expired ======================"
+wget -O /usr/local/bin/userdelexpired "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/userdelexpired" && chmod +x /usr/local/bin/userdelexpired
+
+echo "0 0 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 0 * * * root xp" >> /etc/crontab
 
 # remove unnecessary files
 apt -y autoclean
