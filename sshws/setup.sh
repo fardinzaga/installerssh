@@ -29,7 +29,7 @@ echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 
 #install ssh ovpn
-wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn.sh ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn.sh ./ssh-vpn.sh
 #install ssh ws
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/websket/install-ws.sh && chmod +x install-ws.sh && screen -S install-ws.sh ./install-ws.sh
 #install v2ray
