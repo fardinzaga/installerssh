@@ -272,7 +272,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/slhost.sh"
 wget -O about "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/about.sh"
-wget -O menu "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sshws/menu"
+wget -O menu "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/hapus.sh"
