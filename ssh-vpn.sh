@@ -288,10 +288,6 @@ wget -O autokick "https://raw.githubusercontent.com/fardinzaga/installerssh/mast
 wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
-
-echo "0 0 * * * root clear-log && reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
-
 chmod +x addhost
 chmod +x menu
 chmod +x usernew
@@ -310,6 +306,12 @@ chmod +x ceklim
 chmod +x ram
 chmod +x renew
 chmod +x clear-log
+
+# Delete Acount SSH Expired
+echo "================  Auto deleted Account Expired ======================"
+wget -O /usr/local/bin/userdelexpired "https://raw.githubusercontent.com/4hidessh/sshtunnel/master/userdelexpired" && chmod +x /usr/local/bin/userdelexpired
+
+echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
 
 # remove unnecessary files
 apt -y autoclean
