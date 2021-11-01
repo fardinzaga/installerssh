@@ -33,7 +33,7 @@ wget -O /etc/systemd/system/ws-fauzanvpn.service https://raw.githubusercontent.c
 wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsdiana && chmod +x /etc/systemd/system/ws-diana.service
 
 #System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/websocketssh/master/proxy/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
+wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsovpn && chmod +x /etc/systemd/system/ws-ovpn.service
 
 ##System SSL/TLS Websocket-SSH Python
 #wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
