@@ -214,10 +214,9 @@ cd
 cd
 apt-get install sslh -y
 
-#configurasi sslh
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sslh/sslh.conf"
+#konfigurasi
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/sslh/sslh"
 service sslh restart
-/etc/init.d/sslh restart
 
 #OpenVPN
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/openvpn/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
