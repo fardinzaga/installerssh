@@ -374,6 +374,10 @@ echo "unset HISTFILE" >> /etc/profile
 
 cd
 rm -f /root/ssh-vpn.sh
+rm -f /root/cert.pem
+rm -f /root/key.pem
 
+echo -e "Done Install SSH Services" | lolcat
+figlet -f slant OnePieceVPN | lolcat
 # finihsing
 clear
