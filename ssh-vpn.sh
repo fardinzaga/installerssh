@@ -351,13 +351,13 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 echo "0 5 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 # remove unnecessary files
-apt -y autoclean
-apt -y remove --purge unscd
+apt-get -y autoclean
+apt-get -y remove --purge unscd
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove bind9*;
 apt-get -y remove sendmail*
-apt -y autoremove
+apt-get -y autoremove
 
 # finishing
 cd
