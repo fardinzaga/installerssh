@@ -270,7 +270,7 @@ cd
 apt install -y libxml-parser-perl
 
 # banner /etc/bnr
-wget -O /etc/bnr "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/banner/bnr"
+wget -O /etc/bnr "https://raw.githubusercontent.com/fardinzaga/installerssh/master/banner/bnr"
 wget -O /etc/banner "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/banner/banner"
 sed -i 's@#Banner@Banner /etc/banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/bnr"@g' /etc/default/dropbear
