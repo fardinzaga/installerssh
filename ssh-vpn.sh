@@ -18,7 +18,7 @@ locality=Indonesia
 organization=fauzanvpn.com
 organizationalunit=fauzanvpn.com
 commonname=fauzanvpn
-email=fauzanvpn.com
+email=admin@fauzanvpn.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/fardinzaga/installerssh/master/password"
