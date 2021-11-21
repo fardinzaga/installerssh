@@ -115,9 +115,6 @@ cd
 sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 5000' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 400' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 
@@ -125,7 +122,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=44/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 77 -p 4000 -p 165 -p 143 -p 109 "/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 143 -p 109 "/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
@@ -160,19 +157,19 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [ws-stunnel]
-accept = 443
-connect = 127.0.0.1:800
+accept = 444
+connect = 127.0.0.1:22
 
 [ssldropbear]
-accept = 444
-connect = 127.0.0.1:44
+accept = 2096
+connect = 127.0.0.1:700
 
 [ssldropbear]
 accept = 777
-connect = 127.0.0.1:22
+connect = 127.0.0.1:109
 
 [openvpn]
-accept = 992
+accept = 442
 connect = 127.0.0.1:1194
 END
 
@@ -302,8 +299,15 @@ chmod +x clear-log
 echo "================  Auto deleted Account Expired ======================"
 wget -O /usr/local/bin/userdelexpired "https://raw.githubusercontent.com/fardinzaga/installerssh/master/userdelexpired" && chmod +x /usr/local/bin/userdelexpired
 
-echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
-
+echo '#!/bin/bash' > /usr/local/bin/reboot_otomatis 
+echo 'tanggal=$(date +"%m-%d-%Y")' >> /usr/local/bin/reboot_otomatis 
+echo 'waktu=$(date +"%T")' >> /usr/local/bin/reboot_otomatis
+echo 'clear-log' >> /usr/local/bin/reboot-otomatis
+echo 'resett' >> /usr/local/bin/reboot-otomatis
+echo 'echo "Server Berhasil Reboot Pada Tanggal $tanggal Dan Jam $waktu." >> /root/log-reboot.txt' >> /usr/local/bin/reboot_otomatis 
+echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis 
+chmod +x /usr/local/bin/reboot_otomatis
+echo "0 5 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 # remove unnecessary files
 apt -y autoclean
 apt -y remove --purge unscd
