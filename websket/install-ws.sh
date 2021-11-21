@@ -1,6 +1,6 @@
 #!/bin/bash
 #installer Websocker tunneling 
-#created Bye HideSSH
+#created Bye Fauzanvpn
 
 cd
 
@@ -10,6 +10,7 @@ wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn-ws.py 
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ovpn-ws.py && chmod +x /home/admin/ovpn-ws.py
+wget -O /usr/local/bin/ws-zahara https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/zahara-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
 
 #izin permision
@@ -18,6 +19,7 @@ chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-fauzanvpn
 chmod +x /usr/local/bin/ws-diana
 chmod +x /usr/local/bin/ws-ovpn
+chmod +x /usr/local/bin/ws-zahara
 chmod +x /usr/local/bin/ws-stunnel
 
 #System OpenSSH Websocket-SSH Python
@@ -66,6 +68,11 @@ systemctl restart ws-diana.service
 systemctl enable ws-ovpn.service
 systemctl start ws-ovpn.service
 systemctl restart ws-ovpn.service
+
+#Enable & Start ws-zahara service
+systemctl enable ws-zahara.service
+systemctl start ws-zahara.service
+systemctl restart ws-zahara.service
 
 #Enable & Start & Restart ws-stunnel service
 systemctl enable ws-stunnel.service
