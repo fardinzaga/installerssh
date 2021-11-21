@@ -359,6 +359,8 @@ apt -y autoremove
 
 # finishing
 cd
+service cron restart
+service sshd restart
 chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/nginx restart
 /etc/init.d/openvpn restart
