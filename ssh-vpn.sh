@@ -62,12 +62,6 @@ systemctl start rc-local.service
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
-# set repo
-sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
-apt install gnupg gnupg1 gnupg2 -y
-wget http://www.webmin.com/jcameron-key.asc
-apt-key add jcameron-key.asc
-
 #update
 apt update -y
 apt upgrade -y
@@ -326,7 +320,6 @@ chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 /etc/init.d/fail2ban restart
-/etc/init.d/webmin restart
 /etc/init.d/stunnel4 restart
 /etc/init.d/vnstat restart
 /etc/init.d/squid restart
