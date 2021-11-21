@@ -37,6 +37,9 @@ wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/f
 #System Websocket-OpenVPN Python
 wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsovpn && chmod +x /etc/systemd/system/ws-ovpn.service
 
+#System Websocket-zahara Python
+wget -O /etc/systemd/system/ws-zahara.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wszahara && chmod +x /etc/systemd/system/ws-zahara.service
+
 ##System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
 
