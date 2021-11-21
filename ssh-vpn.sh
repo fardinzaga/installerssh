@@ -15,10 +15,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=Fauzanvpn.com
-organizationalunit=Fauzanvpn.com
-commonname=Fauzanvpn.com
-email=Fauzanvpn.com
+organization=fauzanvpn.com
+organizationalunit=fauzanvpn.com
+commonname=fauzanvpn
+email=fauzanvpn.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/fardinzaga/installerssh/master/password"
