@@ -210,7 +210,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 cd
 /etc/init.d/stunnel4 restart
 cd
-apt-get -y install sslh
+#install sslh
+cd
+apt-get install sslh -y
+
 #configurasi sslh
 wget -O /etc/default/sslh "https://raw.githubusercontent.com/fardinzaga/installerssh/master/sslh/sslh.conf"
 service sslh restart
