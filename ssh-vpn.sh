@@ -269,10 +269,11 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 cd
 apt install -y libxml-parser-perl
 
-# banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/fardinzaga/installerssh/master/banner/bannerssh.conf"
-echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
+# banner /etc/bnr
+wget -O /etc/bnr "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/banner/bnr"
+wget -O /etc/banner "https://raw.githubusercontent.com/fardinzaga/websocketssh/master/banner/banner"
+sed -i 's@#Banner@Banner /etc/banner@g' /etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/bnr"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
 wget https://raw.githubusercontent.com/fardinzaga/installerssh/master/bbr/bbr.sh && chmod +x bbr.sh && ./bbr.sh
