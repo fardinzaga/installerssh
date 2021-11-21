@@ -261,7 +261,7 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/slhost.sh"
+wget -O add-host "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/slhost.sh"
 wget -O about "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/about.sh"
 wget -O menu "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/usernew.sh"
@@ -279,7 +279,7 @@ wget -O autokick "https://raw.githubusercontent.com/fardinzaga/installerssh/mast
 wget -O ceklim "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/fardinzaga/installerssh/master/menu/clear-log.sh"
-chmod +x addhost
+chmod +x add-host
 chmod +x menu
 chmod +x usernew
 chmod +x trial
