@@ -10,7 +10,7 @@ wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fardinzaga/
 wget -O /usr/local/bin/ws-fauzanvpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/fauzanvpn-ws.py 
 wget -O /usr/local/bin/ws-diana https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/diana-ws.py
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ovpn-ws.py && chmod +x /home/admin/ovpn-ws.py
-#wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/ws-stunnel && chmod +x /home/admin/ws-stunnel 
 
 #izin permision
 chmod +x /usr/local/bin/ws-openssh
@@ -18,7 +18,7 @@ chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-fauzanvpn
 chmod +x /usr/local/bin/ws-diana
 chmod +x /usr/local/bin/ws-ovpn
-#chmod +x /usr/local/bin/ws-stunnel
+chmod +x /usr/local/bin/ws-stunnel
 
 #System OpenSSH Websocket-SSH Python
 wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
@@ -36,7 +36,7 @@ wget -O /etc/systemd/system/ws-diana.service https://raw.githubusercontent.com/f
 wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wsovpn && chmod +x /etc/systemd/system/ws-ovpn.service
 
 ##System SSL/TLS Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/fardinzaga/installerssh/master/websocket/service.wswulan && chmod +x /etc/systemd/system/ws-stunnel.service
 
 
 #restart service
@@ -68,6 +68,6 @@ systemctl start ws-ovpn.service
 systemctl restart ws-ovpn.service
 
 #Enable & Start & Restart ws-stunnel service
-#systemctl enable ws-stunnel.service
-#systemctl start ws-stunnel.service
-#systemctl restart ws-stunnel.service
+systemctl enable ws-stunnel.service
+systemctl start ws-stunnel.service
+systemctl restart ws-stunnel.service
